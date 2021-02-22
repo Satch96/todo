@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>To-Do</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div id="content">
+            <div id="overlay">
+                <div id="top_bar"></div>
+                <div id="add_todo_modal" class="add_todo_modal">
+                    <form action="javascript:todo_form()" id="form">
+                        <label>Title:</label><br>
+                        <textarea id="title" name="title" rows="1" cols="50" required></textarea><br>
+                        <label>Description:</label><br>
+                        <textarea id="description" name="description" rows="4" cols="50" required></textarea><br>
+                        <label>Due Date:</label><br>
+                        <input type="date" id="due_date" name="due_date" min="today" required><br>
+                        <label>Priority:</label><br>
+                        <select id="priority" name="priority" required>
+                            <option value="High">High</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Low">Low</option>
+                        </select><br>
+                        <input type="submit">
+                    </form>
+                    <button id="modal_close">Cancel</button>
+                </div>
+                <div id="add_todo_button_container">
+                    <button id="add_todo_button">Add To Do</button>
+                </div>
+                <div id="table_container">
+                    <table id ="table">
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            </div>        
+        <script src="main.js"></script>
+    </body>
+</html>
